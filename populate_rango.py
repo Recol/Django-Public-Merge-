@@ -1,13 +1,10 @@
 import os
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tango_with_django_project.settings')
-from rango.models import Page, Category
 
 import django
-
 django.setup()
 
-
+from rango.models import Category, Page
 
 def populate():
     python_pages = [
@@ -77,5 +74,5 @@ def add_page(cat, title, url, views=0):
 
 
 if __name__ == '__main__':
-    print('Starting Rango population script...')
+    print('Starting Rango pipulation script...')
     populate()
